@@ -271,9 +271,7 @@ int main(void)
   MX_USART2_UART_Init();
   /* USER CODE BEGIN 2 */
   HAL_TIM_Base_Start_IT(&htim3);
-  HAL_ADC_Start_DMA(&hadc1,
-                    (uint32_t*)adc_buf,
-                    ADC_BUF_SIZE);
+  HAL_ADC_Start_DMA(&hadc1,(uint32_t*)adc_buf,ADC_BUF_SIZE);
   HAL_GPIO_WritePin(OLED_RES_GPIO_Port, OLED_RES_Pin, GPIO_PIN_RESET);
   HAL_Delay(50);
 
